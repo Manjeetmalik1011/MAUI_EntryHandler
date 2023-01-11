@@ -48,6 +48,7 @@ Please have below beautiful  UI
 
 ![And![iOS](https://user-images.githubusercontent.com/100989615/211735155-03f3db0c-38e7-4c4f-bd03-24f8d81d931c.jpg)
 
-roid_Image](https://user-images.githubusercontent.com/100989615/211735128-17d97898-a87f-44ba-8dbd-ba8972b92cd5.jpg)
+![Android_Image](https://user-images.githubusercontent.com/100989615/211735375-89498c78-d01a-4283-8c16-f864f4591bc7.jpg)
+
 
 

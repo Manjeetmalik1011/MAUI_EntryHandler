@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUIHandlers.Application.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUIHandlers.Application.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+     <Shell.Resources>
+          <!-- Colors for the tab bar -->
+        <Color x:Key="TabBarBackgroundColor">#828282</Color>
+        <Color x:Key="TabBarTitleColor">#6FCF97</Color>
+        <Color x:Key="TabBarUnselectedColor">#fff</Color>
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+            <Setter Property="Shell.TabBarDisabledColor" Value="{DynamicResource TabBarDisabledColor}"/>
+            <Setter Property="Shell.TabBarForegroundColor" Value="{DynamicResource TabBarForegroundColor}" />
+            <Setter Property="Shell.TabBarTitleColor" Value="{DynamicResource TabBarTitleColor}"/>
+            <Setter Property="Shell.TabBarUnselectedColor" Value="{DynamicResource TabBarUnselectedColor}" />
+        </Style>
+     </Shell.Resources>
+
+      <TabBar>
+           <Tab Title="Mandeep Borderless Controls" > 
+               <ShellContent  ContentTemplate="{DataTemplate local:BorderlessControlsPage}" />
+           </Tab>
+           <Tab Title="Mandeep Material Controls" >
+               <ShellContent ContentTemplate="{DataTemplate local:MaterialControlsPage}" />
+           </Tab>
+    </TabBar>
+</Shell>
+

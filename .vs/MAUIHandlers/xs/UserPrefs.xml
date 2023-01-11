@@ -1,0 +1,4 @@
+﻿<Properties StartupConfiguration="{A6E6CD1C-0355-415E-91D1-041B9A26FBC6}|Default" GitUserInfo="UsingMD">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MAUIHandlers.Application PreferredExecutionTarget="MyAppleMacCatalystID" />
+</Properties>

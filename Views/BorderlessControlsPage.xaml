@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:MAUIHandlers.Application.CustomControls"
+             x:Class="MAUIHandlers.Application.Views.BorderlessControlsPage"
+             Title="Mandeep Borderless Controls">
+
+<VerticalStackLayout>
+    <ScrollView
+        BackgroundColor="White">
+        <StackLayout
+            Orientation="Vertical"
+            Padding="30"
+            Spacing="15">
+            <Frame Padding="10,5,5,5">
+                 <components:BorderlessEntry HeightRequest="40"
+                Placeholder="First name"
+                Keyboard="Text"
+                ReturnType="Next" /> 
+            </Frame>
+            <Frame Padding="10,5,5,5">
+                <components:BorderlessEntry HeightRequest="40"
+                    Placeholder="Last Name"
+                    Keyboard="Email"
+                    ReturnType="Next"/>
+             </Frame>
+            <Frame Padding="10,5,5,5">
+                <components:BorderlessEntry HeightRequest="40"
+                    Placeholder="Email Address"
+                    Keyboard="Chat"
+                    ReturnType="Next"
+                    MaxLength="20" />
+             </Frame>
+            <Frame Padding="10,5,5,5">
+                <components:BorderlessEntry HeightRequest="40"
+                    Placeholder="Phone Number"
+                    ReturnType="Next"/>
+            </Frame>
+            <Frame Padding="10,5,5,5">
+                <components:BorderlessEntry HeightRequest="40"
+                    Placeholder="Adress"
+                    Keyboard="Default"
+                    ReturnType="Next"
+                    IsPassword="True" />
+            </Frame>
+            <Frame Padding="10,5,5,5">
+                <components:BorderlessEntry HeightRequest="40"
+                    Placeholder="Pincode"
+                    Keyboard="Numeric"
+                    ReturnType="Next"/>
+             </Frame>
+        </StackLayout>
+    </ScrollView>
+   </VerticalStackLayout>
+</ContentPage>

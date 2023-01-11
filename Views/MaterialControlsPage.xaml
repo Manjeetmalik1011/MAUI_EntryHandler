@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:MAUIHandlers.Application.CustomControls"
+             x:Class="MAUIHandlers.Application.Views.MaterialControlsPage"
+             Title="Mandeep Material Controls" >
+    <VerticalStackLayout>
+       <ScrollView
+        BackgroundColor="White">
+        <StackLayout
+            Orientation="Vertical"
+            Padding="30"
+            Spacing="15">
+
+          
+            <!-- Our custom outlined Material Entry -->
+            <components:AdvanceMaterialEntry
+                PlaceholderText="Outlined Material Entry"
+                Keyboard="Text"
+                ReturnType="Next" />
+            
+            <!-- Our Material Entry with Helper Text -->
+            <components:AdvanceMaterialEntry
+                PlaceholderText="With Helper"
+                Keyboard="Email"
+                ReturnType="Next"
+                HelperText="Helper message" />
+
+            <!-- Our Material Entry with Character Cunter -->
+            <components:AdvanceMaterialEntry
+                PlaceholderText="With char counter"
+                Keyboard="Chat"
+                ReturnType="Next"
+                MaxLength="20" />
+
+            <!-- Our Material Entry with a Leading Icon -->
+            <components:AdvanceMaterialEntry
+                PlaceholderText="With leading icon"
+                Keyboard="Email"
+                ReturnType="Next"
+                LeadingIcon="ic_user.png" />
+
+            <!-- Our Material Entry password type -->
+            <components:AdvanceMaterialEntry
+                PlaceholderText="With password"
+                Keyboard="Default"
+                ReturnType="Next"
+                IsPassword="True" />
+
+            <!-- Our Material Entry with Error display -->
+            <components:AdvanceMaterialEntry
+                PlaceholderText="With error"
+                Keyboard="Email"
+                ReturnType="Next"
+                HasError="True"
+                ErrorText="Error message" />
+        </StackLayout>
+    </ScrollView>
+   </VerticalStackLayout>
+</ContentPage>

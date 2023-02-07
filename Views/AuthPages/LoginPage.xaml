@@ -7,7 +7,7 @@
              Shell.TabBarIsVisible="False"
              Shell.PresentationMode="ModalAnimated"
              Title="LoginPage">
-   <ContentPage.Content>
+   <!--<ContentPage.Content>
         <StackLayout Spacing="16" Margin="16,32">
             <Frame>
                 <Label Text="Welcome to Xamarin.Forms Shell Login!" HorizontalTextAlignment="Center" FontSize="Title" />
@@ -29,5 +29,41 @@
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
+    </ContentPage.Content>-->
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,30" Source="xamarinlogo.png" Aspect="AspectFit" HeightRequest="180" WidthRequest="80"> </Image>
+            <Frame Grid.Row="1" Margin="0,0,0,-40" BorderColor="#1C375C" HasShadow="True"  CornerRadius="50" HeightRequest="700">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" HorizontalOptions="StartAndExpand" Spacing="40">
+                        
+                        <Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnLfAn36-LTYNHjioWgvu-0KUTIDDrW5lX_g" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                        <Image Source="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                        <Image Source="https://cdn-icons-png.flaticon.com/512/174/174857.png" WidthRequest="30"
+                               HeightRequest="30" Aspect="AspectFit"></Image>
+                    </StackLayout>
+                    
+                    <Label Grid.Row="1"  Text="Enter your phone no." FontSize="24" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"></Label>
+                    <Entry Grid.Row="2" Placeholder="Username" Margin="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
+                   
+                    <StackLayout Grid.Row="3" HorizontalOptions="StartAndExpand" Spacing="5">
+                         <Button Text="Login" Command="{Binding ExecuteLogin}" BackgroundColor="#1C375C" CornerRadius="20"></Button>
+                         <Label  Text="or signin with" HorizontalOptions="CenterAndExpand"></Label>
+                     </StackLayout>
+                 </Grid>
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

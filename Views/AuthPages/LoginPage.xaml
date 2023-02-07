@@ -6,6 +6,7 @@
              Shell.FlyoutBehavior="Disabled"
              Shell.TabBarIsVisible="False"
              Shell.PresentationMode="ModalAnimated"
+             BackgroundColor="#1C375C"
              Title="LoginPage">
    <!--<ContentPage.Content>
         <StackLayout Spacing="16" Margin="16,32">
@@ -53,14 +54,16 @@
                                HeightRequest="30" Aspect="AspectFit"></Image>
                         <Image Source="https://cdn-icons-png.flaticon.com/512/174/174857.png" WidthRequest="30"
                                HeightRequest="30" Aspect="AspectFit"></Image>
+
                     </StackLayout>
                     
                     <Label Grid.Row="1"  Text="Enter your phone no." FontSize="24" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"></Label>
                     <Entry Grid.Row="2" Placeholder="Username" Margin="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
                    
-                    <StackLayout Grid.Row="3" HorizontalOptions="StartAndExpand" Spacing="5">
-                         <Button Text="Login" Command="{Binding ExecuteLogin}" BackgroundColor="#1C375C" CornerRadius="20"></Button>
-                         <Label  Text="or signin with" HorizontalOptions="CenterAndExpand"></Label>
+                    <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="5">
+                         <Button Text="Login" Command="{Binding ExecuteLogin}" BackgroundColor="#1C375C" CornerRadius="5"></Button>
+                         <CheckBox x:Name="checkBox"></CheckBox>
+                         <Label Text="Keep me logged in" FontSize="20" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
                      </StackLayout>
                  </Grid>
             </Frame>

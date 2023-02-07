@@ -1,4 +1,7 @@
-﻿<Properties StartupConfiguration="{A6E6CD1C-0355-415E-91D1-041B9A26FBC6}|Default" GitUserInfo="UsingMD">
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{A6E6CD1C-0355-415E-91D1-041B9A26FBC6}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
@@ -15,11 +18,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.MAUIHandlers.Application PreferredExecutionTarget="net7.0-android" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_30" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MAUIHandlers.Application PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
 </Properties>

@@ -2,7 +2,6 @@
 using MAUIHandlers.Application.Models;
 using MAUIHandlers.Application.Services.Routing;
 using MAUIHandlers.Application.Views;
-using static Android.Content.ClipData;
 
 namespace MAUIHandlers.Application.ViewModels
 {

@@ -54,30 +54,68 @@
 
 	<ItemGroup>
 	  <None Remove="CommonUtility\" />
-	  <None Remove="CustomControls\" />
 	  <None Remove="Views\" />
 	  <None Remove="Resources\Images\ic_error.png" />
 	  <None Remove="Resources\Images\ic_eye_close.png" />
 	  <None Remove="Resources\Images\ic_eye_open.png" />
 	  <None Remove="Resources\Images\ic_user.png" />
 	  <None Remove="Resources\Images\settings.png" />
+	  <None Remove="ViewModels\" />
+	  <None Remove="Services\" />
+	  <None Remove="Services\Identity\" />
+	  <None Remove="Services\Routing\" />
+	  <None Remove="Views\ControlTemplates\" />
+	  <None Remove="Views\AuthPages\" />
+	  <None Remove="CommonUtility\CustomControls\" />
+	  <None Remove="Models\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="CommonUtility\" />
-	  <Folder Include="CustomControls\" />
 	  <Folder Include="Views\" />
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Services\" />
+	  <Folder Include="Services\Identity\" />
+	  <Folder Include="Services\Routing\" />
+	  <Folder Include="Views\ControlTemplates\" />
+	  <Folder Include="Views\AuthPages\" />
+	  <Folder Include="CommonUtility\CustomControls\" />
+	  <Folder Include="Models\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <MauiXaml Update="CustomControls\MaterialEntry.xaml">
+	  <MauiXaml Update="Views\RegisterPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="CustomControls\AdvanceMaterialEntry.xaml">
+	  <MauiXaml Update="Views\LoadingPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\BorderlessControlsPage.xaml">
+	  <MauiXaml Update="Views\MainPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\MaterialControlsPage.xaml">
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Views\ControlTemplates\BorderlessControlsPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Views\ControlTemplates\MaterialControlsPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Views\AuthPages\ForgotPasswordPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Views\AuthPages\LoginPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ItemsPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AboutPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="CommonUtility\CustomControls\AdvanceMaterialEntry.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="CommonUtility\CustomControls\MaterialEntry.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ItemDetailPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
 	</ItemGroup>

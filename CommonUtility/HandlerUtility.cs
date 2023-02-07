@@ -4,7 +4,7 @@ using Microsoft.Maui.Platform;
 
 namespace MAUIHandlers.Application.CommonUtility
 {
-	public class HndlerUtility
+	public class HandlerUtility
 	{
         public static void ModifyEntry()
         {
@@ -20,7 +20,7 @@ namespace MAUIHandlers.Application.CommonUtility
                 handler.PlatformView.Layer.BorderWidth= 0;
                 handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
 #elif WINDOWS
-                            handler.PlatformView.BorderThickness= new Microsoft.Ui.Xaml.Thickness(0)
+                 handler.PlatformView.BorderThickness= new Microsoft.Ui.Xaml.Thickness(0)
 #endif
                 }
 

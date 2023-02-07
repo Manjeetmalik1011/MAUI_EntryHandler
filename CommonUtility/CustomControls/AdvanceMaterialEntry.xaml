@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIHandlers.Application.CustomControls.AdvanceMaterialEntry"
+            xmlns:customcontrols="clr-namespace:MAUIHandlers.Application.CustomControls"
+             Margin="0"
+            Padding="0, 5, 0, 10"
+            RowDefinitions="Auto, Auto"
+            ColumnDefinitions="*, Auto">
+    <!-- To activate animation when entry is clicked -->
+    <Grid.GestureRecognizers>
+        <TapGestureRecognizer Tapped="AdvanceMaterialEntryTapped" />
+    </Grid.GestureRecognizers>
+
+    <Frame
+        Grid.Row="0"
+        Grid.Column="0"
+        Grid.ColumnSpan="2"
+        x:Name="containerFrame"
+        BackgroundColor="White"
+        BorderColor="Gray"
+        CornerRadius="10"
+        HasShadow="False"
+        Padding="{OnPlatform Android='1.5', iOS='1.5', WinUI='5'}">
+        <StackLayout
+            Orientation="Horizontal">
+            
+            <!-- Leading icon -->
+            <Image
+                x:Name="leadingIcon"
+                HorizontalOptions="Start"
+                Margin="18, 0, 0, 0" 
+                HeightRequest="24"
+                IsVisible="False">
+                <Image.Triggers>
+                    <Trigger
+                        TargetType="Image"
+                        Property="IsVisible"
+                        Value="True">
+                        <Setter
+                            Property="WidthRequest"
+                            Value="24" />
+                    </Trigger>
+                    <Trigger
+                        TargetType="Image"
+                        Property="IsVisible"
+                        Value="False">
+                        <Setter
+                            Property="WidthRequest"
+                            Value="0" />
+                    </Trigger>
+                </Image.Triggers>
+            </Image>
+            
+            <!-- The Entry -->
+            <customcontrols:BorderlessEntry
+                x:Name="customEntry"
+                HorizontalOptions="FillAndExpand"
+                Margin="{OnPlatform Android='18, 0, 18, 0', iOS='18, 10, 0, 10'}"
+                BackgroundColor="White"
+                FontSize="Medium"
+                TextColor="Black"
+                Focused="CustomEntryFocused"
+                Unfocused="CustomEntryUnfocused">
+            </customcontrols:BorderlessEntry>
+            
+            <!-- Trailing icon -->
+            <Image
+                x:Name="trailingIcon"
+                HorizontalOptions="End"
+                Margin="0, 0, 18, 0"
+                HeightRequest="20"
+                WidthRequest="20" />
+            
+            <!-- Eye icon for password -->
+            <Image
+                x:Name="passwordIcon"
+                HorizontalOptions="End"
+                Margin="0, 0, 18, 0"
+                HeightRequest="20"
+                WidthRequest="20"
+                IsVisible="False">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="PasswordEyeTapped" />
+                </Image.GestureRecognizers>
+                <Image.Triggers>
+                    <DataTrigger
+                        TargetType="Image"
+                        Binding="{Binding Source={x:Reference customEntry}, Path=IsPassword}"
+                        Value="True">
+                        <Setter
+                            Property="Source"
+                            Value="ic_eye_open.png" />
+                    </DataTrigger>
+                    <DataTrigger
+                        TargetType="Image"
+                        Binding="{Binding Source={x:Reference customEntry}, Path=IsPassword}"
+                        Value="False">
+                        <Setter
+                            Property="Source"
+                            Value="ic_eye_close.png" />
+                    </DataTrigger>
+                </Image.Triggers>
+            </Image>
+        </StackLayout>
+    </Frame>
+
+    <!-- Placeholder -->
+    <StackLayout
+        x:Name="placeholderContainer"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="Start"
+        BackgroundColor="White"
+        Padding="5, 0">
+        <StackLayout.Triggers>
+            <DataTrigger
+                TargetType="StackLayout"
+                Binding="{Binding Source={x:Reference leadingIcon}, Path=IsVisible}"
+                Value="True">
+                <Setter
+                    Property="Margin"
+                    Value="45, 10, 36, 0" />
+            </DataTrigger>
+            <DataTrigger
+                TargetType="StackLayout"
+                Binding="{Binding Source={x:Reference leadingIcon}, Path=IsVisible}"
+                Value="False">
+                <Setter
+                    Property="Margin"
+                    Value="15, 10, 40, 0" />
+            </DataTrigger>
+        </StackLayout.Triggers>
+        <Label
+            x:Name="placeholderText"
+            VerticalOptions="CenterAndExpand"
+            VerticalTextAlignment="Center"
+            FontSize="Medium"
+            TextColor="Gray" />
+    </StackLayout>
+
+    <!-- Helper text -->
+    <Label
+        x:Name="helperText"
+        Grid.Row="1"
+        Grid.Column="0"
+        Margin="18, 0, 0, 0"
+        FontSize="Small"
+        TextColor="Gray"
+        LineBreakMode="WordWrap"
+        IsVisible="false" />
+
+    <!-- Char counter -->
+    <Label
+        x:Name="charCounterText"
+        Grid.Row="1"
+        Grid.Column="1"
+        Margin="0, 0, 18, 0"
+        HorizontalTextAlignment="End"
+        FontSize="Small"
+        TextColor="Gray"
+        IsVisible="false" />
+
+    <!-- Error text -->
+    <Label
+        x:Name="errorText"
+        Grid.Row="1"
+        Grid.Column="0"
+        Margin="18, 0, 0, 0"
+        FontSize="Small"
+        TextColor="Red"
+        LineBreakMode="WordWrap"
+        IsVisible="false" />
+</Grid>
